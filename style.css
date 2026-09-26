@@ -1,0 +1,13 @@
+/* ---------- Шапка ---------- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    margin: 0 20px;                    /* отступ от краёв экрана */
+    border-radius: 0 0 20px 20px;      /* скруглены ТОЛЬКО нижние углы */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);  /* тень снизу */
+    background: #ffffff;
+    position: relative;
+    z-index: 10;
+}
