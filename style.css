@@ -1,13 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #000;
+}
 /* ---------- Шапка ---------- */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 60px;
-    margin: 0 20px;                    /* отступ от краёв экрана */
-    border-radius: 0 0 20px 20px;      /* скруглены ТОЛЬКО нижние углы */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);  /* тень снизу */
+    margin: 0 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     background: #ffffff;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #b07fd6;
+}
+
+.cart-btn {
+    background: #b07fd6;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cart-btn:hover {
+    background: #8e5bb8;
+}
+/* ---------- Баннер ---------- */
+.banner {
     position: relative;
-    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg, #e8d5f5 0%, #b07fd6 100%);
+    border-radius: 20px;
+    margin: 30px 60px 40px;
+    padding: 40px 60px;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.banner-text h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.05;
+    margin: 10px 0 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.strike {
+    position: relative;
+    font-size: 42px;
+    color: #fff;
+    display: inline-block;
+    opacity: 0.85;
+}
+
+.strike::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 4px;
+    background: #ff4fd8;
+    transform: translateY(-50%);
+}
+
+.ad {
+    font-size: 12px;
+    color: #fff;
+    opacity: 0.85;
+    line-height: 1.4;
+    margin-top: 20px;
+}
+
+.banner-img {
+    width: 260px;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.order-btn {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 22px;
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.order-btn:hover {
+    background: #fff;
+    color: #b07fd6;
+}
+/* ---------- Товары ---------- */
+.products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 0 60px 60px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(176, 127, 214, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(176, 127, 214, 0.35);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    background: #faf4ff;
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: bold;
+    color: #b07fd6;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
 }
