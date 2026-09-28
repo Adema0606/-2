@@ -144,18 +144,19 @@ header {
 }
 
 .card-body {
-    padding: 1px;
+    padding: 20px 20px 24px 20px;
 }
 
 .price {
     font-size: 26px;
     font-weight: bold;
     color: #b07fd6;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .desc {
     font-size: 14px;
     line-height: 1.4;
     color: #333;
+    margin: 0;
 }
